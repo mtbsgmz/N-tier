@@ -154,5 +154,19 @@ public class KayitSwing {
 		});
 		btnKaydet.setBounds(403, 174, 89, 23);
 		frame.getContentPane().add(btnKaydet);
+		
+		JButton btnYen = new JButton("YENI");
+		btnYen.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				txtAd.setText("");
+				txtAdres.setText(" ");
+				txtArac1.setText("");
+				txtArac2.setText("");			
+				cmbCinsiyet.setSelectedIndex(0);
+				
+			}
+		});
+		btnYen.setBounds(291, 174, 89, 23);
+		frame.getContentPane().add(btnYen);
 	}
 }
