@@ -6,9 +6,9 @@ import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 
-import com.entities.Adres;
+import com.entities.ADRES;
 
-public class AdresDao implements ICrud<Adres> {
+public class AdresDao implements ICrud<ADRES> {
 	EntityManagerFactory emf = null;
 	EntityManager em = null;
 
@@ -18,7 +18,7 @@ public class AdresDao implements ICrud<Adres> {
 	}
 
 	@Override
-	public Boolean create(Adres varlik) {
+	public Boolean create(ADRES varlik) {
 		try {
 			em.getTransaction().begin();
 			em.persist(varlik);
@@ -31,25 +31,25 @@ public class AdresDao implements ICrud<Adres> {
 	}
 
 	@Override
-	public Adres read(Long id) {
+	public ADRES read(Long id) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public List<Adres> readAll() {
+	public List<ADRES> readAll() {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public Boolean update(Adres varlik) {
+	public Boolean update(ADRES varlik) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public Boolean update(Adres varlik, Long id) {
+	public Boolean update(ADRES varlik, Long id) {
 		// TODO Auto-generated method stub
 		return null;
 	}

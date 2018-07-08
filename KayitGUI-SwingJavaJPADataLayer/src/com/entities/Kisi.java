@@ -31,7 +31,7 @@ public class Kisi extends BaseEntitiy implements Serializable {
 	private Calendar CREATED_TIME;
 	
 	@OneToOne(cascade = ALL)
-	private Adres adres;
+	private ADRES adres;
 	
 	@OneToMany(cascade = ALL)
 	private List<Arac> araclar;
@@ -47,10 +47,10 @@ public class Kisi extends BaseEntitiy implements Serializable {
 	public void setAD(String AD) {
 		this.AD = AD;
 	}
-	public Adres getAdres() {
+	public ADRES getAdres() {
 		return adres;
 	}
-	public void setAdres(Adres adres) {
+	public void setAdres(ADRES adres) {
 		this.adres = adres;
 	}
 	public CINSIYET getCinsiyet() {

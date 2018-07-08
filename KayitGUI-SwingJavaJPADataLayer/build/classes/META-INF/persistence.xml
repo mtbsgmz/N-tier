@@ -3,7 +3,7 @@
 	<persistence-unit name="KayitGUI-SwingJavaJPADataLayer" transaction-type="RESOURCE_LOCAL">
 		<class>com.entities.BaseEntitiy</class>
 		<class>com.entities.Kisi</class>
-		<class>com.entities.Adres</class>
+		<class>com.entities.ADRES</class>
 		<class>com.entities.Arac</class>
 		<properties>
 			<property name="javax.persistence.jdbc.url" value="jdbc:oracle:thin:@localhost:1521:xe"/>

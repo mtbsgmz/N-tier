@@ -17,7 +17,7 @@ import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JTextField;
 
-import com.entities.Adres;
+import com.entities.ADRES;
 import com.entities.Arac;
 import com.entities.CINSIYET;
 import com.entities.Kisi;
@@ -120,7 +120,7 @@ public class KayitSwing {
 		btnKaydet.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {			
 		try {
-			 Adres adresim = new Adres();
+			 ADRES adresim = new ADRES();
 			 adresim.setACIK_ADRES(txtAdres.getText().trim());
 			 
 			 Arac arac1 = new Arac();//1arac nesnesi urettim

@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
 
-import com.entities.Adres;
+import com.entities.ADRES;
 import com.entities.Arac;
 import com.entities.CINSIYET;
 import com.entities.Kisi;
@@ -25,7 +25,7 @@ public class Yonet {
 		 	araclarim.add(arac2);
 		 	
 		
-		 Adres adresim = new Adres();
+		 ADRES adresim = new ADRES();
 		 adresim.setACIK_ADRES("yenimahall Ankara// baya acik oldu");
 		 
 		 Kisi kisi = new Kisi();
