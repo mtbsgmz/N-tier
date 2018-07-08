@@ -1,0 +1,41 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui">
+
+<ui:composition template="/WEB-INF/templates/template.xhtml">
+	<ui:param name="secim" value="index" />
+	<ui:define name="orta">
+		<h:form>
+			<p:growl></p:growl>
+			<p:panelGrid columns="2">
+				<p:outputLabel value="Ad:" />
+				<p:inputText id="ad" placeholder="Adı Girin !"
+					value="#{personBean.ad}" required="true"
+					requiredMessage="Lütfen Adı Girin" />
+				<p:outputLabel value="Soyad:" />
+				<p:inputText id="soyad" placeholder="Soydı Girin !"
+					value="#{personBean.soyad}" />
+				<p:outputLabel value="TC No:" />
+				<p:inputText id="tcno" placeholder="TC No Girin !" maxlength="11"
+					value="#{personBean.tc}" required="true"
+					requiredMessage="Lütfen Soyad Girin">
+					<p:keyFilter regEx="/[\d]/" />
+				</p:inputText>
+				<p:outputLabel value="Telefon Girin:" />
+				<p:inputMask mask="(999)999 99 99" value="#{personBean.tel}"
+					required="true" requiredMessage="Lütfen TC No Girin!" />
+				<p:outputLabel value="Adres:" />
+				<p:inputTextarea id="adres" placeholder="Adres Girin !"
+					value="#{personBean.adres}" required="true"
+					requiredMessage="Lütfen Adres Girin" />
+				<p:spacer />
+				<p:commandButton value="Kaydet" action="#{personBean.Kaydet()}"
+					ajax="false" styleClass="pull-right" />
+			</p:panelGrid>
+		</h:form>
+	</ui:define>
+</ui:composition>
+</html>

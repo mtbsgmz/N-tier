@@ -1,0 +1,58 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui">
+
+<h:head></h:head>
+<body>
+	<ui:composition template="/WEB-INF/templates/template.xhtml">
+		<ui:param name="secim" value="listele" />
+		<ui:define name="orta">
+			<h:form>
+				<p:panelGrid columns="2">
+					<p:outputLabel value="Ad:" />
+					<p:inputText value="#{listeleBean.person.ad}" />
+					<p:outputLabel value="Soyad:" />
+					<p:inputText value="#{listeleBean.person.soyad}" />
+					<p:outputLabel value="Adres:" />
+					<p:inputText value="#{listeleBean.person.adres}" />
+					<p:outputLabel value="Tc:" />
+					<p:inputText value="#{listeleBean.person.tc}" />
+					<p:spacer />
+					<p:commandButton style="pull-right"
+						action="#{listeleBean.KisiGuncelle()}" value="Güncelle"
+						rendered="#{listeleBean.updateButtonShown}" />
+				</p:panelGrid>
+
+				<p:dataTable var="kisi" value="#{listeleBean.kisileriGetir()}">
+					<p:column headerText="Id">
+						<h:outputText value="#{kisi.id}" />
+					</p:column>
+
+					<p:column headerText="Adı">
+						<h:outputText value="#{kisi.ad}" />
+					</p:column>
+
+					<p:column headerText="Soyadı">
+						<h:outputText value="#{kisi.soyad}" />
+					</p:column>
+
+					<p:column headerText="Adresi">
+						<h:outputText value="#{kisi.adres}" />
+					</p:column>
+
+					<p:column headerText="TC">
+						<h:outputText value="#{kisi.tc}" />
+					</p:column>
+					<p:column>
+						<p:commandButton value="Seç"
+							action="#{listeleBean.KisiSec(kisi.id)}" ajax="false" />
+					</p:column>
+				</p:dataTable>
+			</h:form>
+		</ui:define>
+	</ui:composition>
+</body>
+</html>

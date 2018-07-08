@@ -1,0 +1,25 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html">
+
+<h:head>
+	<h:outputStylesheet library="bootstrap_337"  name="css/bootstrap.min.css"   />
+</h:head>
+<body>
+	
+	<ui:composition>
+		<h:form>
+			<div class="list-group">
+				<h:commandLink action="index.xhtml?faces-redirect=true" styleClass="list-group-item #{gelensecim == 'index' ? 'active':''}" value="Kişi Kayıt İşlemi" />
+				<h:commandLink action="listele.xhtml?faces-redirect=true" styleClass="list-group-item #{gelensecim eq 'listele' ? 'active':''}"  value="Kişi Listele" />
+				<h:commandLink action="raporlar.xhtml?faces-redirect=true" styleClass="list-group-item #{gelensecim eq 'raporlar' ? 'active':''}"  value="Raporlar" />
+				
+			</div>
+		</h:form>
+	</ui:composition>
+
+
+</body>
+</html>

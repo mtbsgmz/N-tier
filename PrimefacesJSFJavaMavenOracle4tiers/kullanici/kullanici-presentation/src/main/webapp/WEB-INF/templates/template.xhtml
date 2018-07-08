@@ -1,0 +1,55 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui">
+
+<h:head>
+	<h:outputStylesheet library="bootstrap_337"
+		name="css/bootstrap.min.css" />
+	<h:outputStylesheet library="bootstrap_337"
+		name="css/bootstrap-theme.min.css" />
+	<h:outputScript library="jquery" name="jquery/jquery-3.2.1.min.js" />
+	<h:outputScript library="bootstrap_337" name="js/bootstrap.min.js" />
+</h:head>
+<body>
+
+	<div class="container-fluid">
+		<!--  Container Start-->
+		<div class="panel">
+			<!-- Panel Start -->
+			<div class="row">
+				<ui:insert name="ust">
+					<ui:include src="/WEB-INF/templates/header.xhtml" />
+				</ui:insert>
+			</div>
+			<div class="panel-body">
+				<div class="row">
+					<div class="col-xs-2 col-sm-2 col-md-3 col-lg-3">
+						<ui:insert name="menu">
+							<ui:include src="/WEB-INF/templates/menu.xhtml">
+								<ui:param name="gelensecim" value="#{secim}" />
+							</ui:include>
+						</ui:insert>
+					</div>
+					<div class="col-xs-10 col-sm-10 col-md-9 col-lg-9">
+						<ui:insert name="orta">
+							<ui:include src="/WEB-INF/templates/content.xhtml" />
+						</ui:insert>
+					</div>
+				</div>
+			</div>
+			<div class="panel-footer navbar navbar-fixed-bottom">
+				<div class="row">
+					<ui:insert name="alt">
+						<ui:include src="/WEB-INF/templates/footer.xhtml" />
+					</ui:insert>
+				</div>
+			</div>
+			<!-- Panel Stop -->
+		</div>
+		<!--  Container Stop -->
+	</div>
+</body>
+</html>
